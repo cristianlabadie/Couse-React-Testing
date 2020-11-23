@@ -2,21 +2,25 @@ import React, {Fragment} from 'react';
 import PropTypes from 'prop-types'
 
 
-const PrimeraApp = (props) => {
+const PrimeraApp = ({ saludo, subtitulo }) => {
 
-    console.log(props);
+    
 
 
     return (
         <Fragment>        
-            <h1>Hola Mundo</h1>
-            <h3>Un h3 con fragment</h3>
+            <h1> { saludo }!!!!</h1>
+            <h3> { subtitulo } </h3>
         </Fragment>
     );
 }
 
 PrimeraApp.propTypes = {
     saludo: PropTypes.string.isRequired
+}
+
+PrimeraApp.defaultProps = {
+    subtitulo: 'Soy un'
 }
 
 export default PrimeraApp;
